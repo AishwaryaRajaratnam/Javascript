@@ -1,0 +1,47 @@
+<html>
+        <head>
+                <title> Object  Creation </title>
+        </head>
+        <body>
+                <script>
+                        /* Object Creation using Object Literal */
+                        var myObj = {iNo:12,sName:'Magesh'};
+                        for(var sKeys in myObj){
+                             document.write( sKeys  +  " : "  + myObj[sKeys] + "<br>");
+                        }
+
+                        /* Object Creation using new */
+                        var myNew = new Object();
+                        myNew.iNo = 12;
+                        myNew.sName = 'Magesh';
+                        document.write(" myNew.iNo            = "  + myNew.iNo + "<br>");
+                        document.write(" myNew.sName     = "   + myNew.sName + "<br>");
+                         /* To Retrieve only the Keys */
+                         var sKeys = Object.keys(myNew);
+                         document.write(" sKeys                       = " + sKeys  + "<br>");
+
+                          /* Object Creation using Object Constructor */
+                          function Employee(iEno,sName,sGrade){
+                                   this.iEno = iEno;
+                                   this.sName = sName;
+                                   this.sGrade = sGrade;
+                          }
+                          var objEmp = new Employee(12,'Magesh','C1');
+                          for(var sKeys in objEmp){
+                               document.write( sKeys  +  " : "  + objEmp[sKeys] + "<br>");
+                          }
+
+                          /* Object Creation using Object.create(); */
+                         var ob = Object.create(Object.prototype, {
+                              a: { writable:true, enumerable:true, value: 1 },
+                              b: { enumerable: true, value: 2 }                             
+                         });
+ 
+                         ob.b = 12;
+
+                         for(var sKeys in ob){
+                             document.write( sKeys  +  " : "  + ob[sKeys] + "<br>");
+                         }
+                </script>
+        </body>
+</html>

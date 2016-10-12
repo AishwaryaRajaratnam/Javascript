@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>The toFixed() method rounds a number to a given number of digits.</p>
+<p>For working with money, toFixed(2) is perfect.</p>
+
+<p id="demo"></p>
+
+<script>
+var a = [[12, 'DDD'], [58, 'BBB'], [28, 'CCC'],[18, 'AAA']];
+document.write(a + "<br>");
+a.sort(sortFunction);
+document.write(a);
+function sortFunction(a, b) {
+    document.write(" a         = " + a  + "<br>" + "b  = " + b + "<br>");
+    if (a[1] === b[1]) {
+        return 0;
+    }
+    else {
+        return (a[1] < b[1]) ? -1 : 1;
+    }
+}
+</script>
+
+</body>
+</html>
+

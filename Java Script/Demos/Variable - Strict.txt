@@ -1,0 +1,12 @@
+<html>
+       <head>
+                <title>  Immediate Mode --- Demo </title>
+       </head>
+       <body>
+               <script>
+                      "use strict";
+                      var iNo=12;
+                      document.write("Value of iNo = " + iNo);
+               </script>
+       </body>
+</html>

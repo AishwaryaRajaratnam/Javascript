@@ -1,0 +1,42 @@
+<html>
+        <head>
+                <title> Object  - Properties and Methods </title>
+        </head>
+        <body>
+                <script>
+                        /* Object with Properties and Methods  */
+                        var myObj = {
+		iNo:12,
+		sName:'Magesh',
+		fnDisplay:function(){
+                                            document.write(" iNo     = " + this.iNo  + " sName = " + this.sName + "<br>");
+		}
+	       };
+                          myObj.fnPrint = function(){
+                                document.write(" Creating Function After Object Creation <br> ");
+                          }
+                          myObj.fnDisplay();
+                          myObj.fnPrint();
+
+                          function Employee(iEno,sName){
+                                  this.iEno = iEno;
+                                  this.sName = sName;
+                          }
+                          var objEmployee = new Employee(13,'Konrad');
+                           objEmployee.fnPrint = function(){
+                                   document.write(" Inside fnPrint() <br> ");
+                           } 
+                          objEmployee.fnPrint();
+ 
+
+                          var objCreate = Object.create(Object.prototype, {
+                               iFirst: { writable:true, enumerable:true, value: 1 },
+                               iSecond: { enumerable: true, value: 2 }
+                          });
+                          objCreate.fnCheck = function(){
+                                 document.write(" Outside Object Creation  <br> ");
+                          }
+                          objCreate.fnCheck();
+                </script>
+        </body>
+</html>

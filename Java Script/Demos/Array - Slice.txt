@@ -1,0 +1,22 @@
+<html>
+      <head>
+               <title> Arrays Sort Demo </title>
+      </head>
+      <body>
+              <script>
+                      var asStr = ["Magesh","Bhoj","Vijayendra","Savitha","Gayathri","Mallika"];
+ 
+	   /* Used to create a new array from an existing array */
+                      var asNew = asStr.slice(1);
+                      document.write(" asNew               = " + asNew  + "<br>");
+                      var asCon = asStr.slice(1,4);
+                      document.write(" asCon                = " + asCon    + "<br>");
+                       var asRight = asStr.slice(-3,-1);
+                      document.write(" asRight                = " + asRight    + "<br>");                      
+                      var as2D = [["Magesh","Bhoj"],["Vijayendra","Savitha"],["Gayathri","Mallika"]];
+                      var as2DNew = as2D.slice(2);
+                      document.write(" as2DNew            = " + as2DNew  + "<br>");
+                       
+              </script>
+      </body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>PerfectNum Immediate</title>
+<script>
+/*Script can be placed in either head or body portion,but its a good practise to place it in body:performance sake .. */
+var num=16;
+var sum=0;
+for(i=1;i<=num/2;i++)
+{
+if(num%i==0)
+sum+=i;
+}
+if(num==sum)
+document.write(num+" is a perfect number");
+else
+document.write(num+" is not a perfect number");
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

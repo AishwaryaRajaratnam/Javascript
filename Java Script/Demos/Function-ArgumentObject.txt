@@ -1,0 +1,17 @@
+<html>
+      <head>
+               <title> Function Argument Object Demo </title>
+      </head>
+      <body>
+              <script>
+                      function fnArgDemo(iFirst,iSecond){
+                            for(iIndex=0;iIndex<arguments.length;iIndex++){
+                                   document.write(arguments[iIndex] + "<br>");
+                            }
+                            document.write(" iFirst         = " + iFirst + "<br>");
+                            document.write(" iSecond    = " + iSecond + "<br>");
+                      }
+                      fnArgDemo(10,12,14,16,18,20,22,24,26,28,30);
+              </script>
+      </body>
+</html>

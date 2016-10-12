@@ -1,0 +1,11 @@
+<html>
+<head>
+<title>PerfectNum_SelfInvokinFuntion</title>
+</head>
+<body>
+<script>
+var fact_of_num=(function(num){var i=1; var sum=0; while(i<=num/2) {if(num%i==0) sum+=i; i++; } if(num==sum) document.write(num+" is a perfect num"); else document.write(num+" is not a perfect num");  })(9);
+
+</script>
+</body>
+</html>

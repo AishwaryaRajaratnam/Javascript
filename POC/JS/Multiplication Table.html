@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>
+Multiplication Table
+</title>
+</head>
+
+<body>
+Enter a number : <input type="text" id="number" name="number"></input>
+<input type="button" value="Click Me" onClick="MultiplyTable()"></input>
+<p id="p1"></p>
+<p id="p2"></p>
+
+
+<script>
+function MultiplyTable()
+{
+var num=document.getElementById("number").value;
+document.getElementById('p1').innerHTML="MULTIPLICATION TABLE OF "+num;
+
+
+   var myTable="<table style='font-family: arial, sans-serif;border-collapse: collapse;width: 40%;'>";
+  for (var i=1; i<=10; i++) {
+    myTable+="<tr><td style='border: 1px solid #dddddd;text-align: center;'>"+num +" * " +i +"</td>";
+    myTable+="<td style='border: 1px solid #dddddd;text-align: center;'>"+  num*i + "</td></tr>";
+    }  
+   myTable+="</table>";
+
+ document.getElementById('p2').innerHTML= myTable;
+}
+</script>
+</body>
+</html>

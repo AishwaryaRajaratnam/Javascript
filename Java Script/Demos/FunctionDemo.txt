@@ -1,0 +1,21 @@
+<html>
+      <head>
+               <title> Function Demo </title>
+      </head>
+      <body>
+              <script>
+                       function fnAdd(iFirst,iSecond){
+                            var iResult = iFirst + iSecond;
+                            return iResult;
+                       }
+                       var iRes = fnAdd(3,9);
+                       document.write(" Value of iRes  = " + iRes + "<br>");
+                       document.write(" typeof fnAdd = " + typeof fnAdd + "<br>");
+                        /* To Convert a Function to a String */
+                        document.write(" typeof fnAdd.toString()  = "  + typeof fnAdd.toString() + "<br>");
+                       /* When we call a Method without () it will return the function definition */
+                       var sFnDef = fnAdd;
+                       document.write(" sFnDef    = " + sFnDef   + "<br>");
+              </script>
+      </body>
+</html>

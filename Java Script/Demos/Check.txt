@@ -1,0 +1,16 @@
+<html>
+<body>
+
+<p>The instanceof operator, when used on an array, returns true.</p>
+
+<p id="demo"></p>
+
+<script>
+var aiNumber = [10,12,14,16,18];
+var aiNo = new Array(3);
+document.write( aiNumber instanceof Array);
+document.write(aiNumber);
+</script>
+
+</body>
+</html>

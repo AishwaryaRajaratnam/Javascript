@@ -1,0 +1,19 @@
+<html>
+       <head>
+       </head>
+       <body>
+              <script>
+                     var myObj = {
+                         iNo:12,
+                         sName:'Magesh',
+                         fnDisplay:function(){
+                                 document.write(" When is the Lunch Break ? ");
+                         }
+                     };
+                     for(var sKeys in myObj){
+                            document.write(sKeys  +   " : " + myObj[sKeys] + "<br>");
+                     }
+              </script>
+       </body>
+
+</html>

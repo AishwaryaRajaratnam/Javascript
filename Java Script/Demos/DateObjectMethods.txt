@@ -1,0 +1,35 @@
+<html>
+<body>
+   <script language="javascript">
+       var objDate = new Date();
+       document.write("  Day  = " + objDate.getDay()  + "<br>");
+       document.write(" Date  =  " + objDate.getDate()+"<br/>");
+       document.write(" Months   =  " + objDate.getMonth() + "<br/>");
+       document.write(" Year   =  " + objDate.getFullYear() + "<br/>");
+       document.write(" Time   =  " + objDate.getTime() + "<br/>");
+       document.write(" Hours  = " + objDate.getHours()+ "<br/>");
+       document.write(" Minutes   =  " + objDate.getMinutes() + "<br/>");
+       document.write(" Seconds   =  " + objDate.getSeconds() + "<br/>");
+
+       objDate.setFullYear(2028);
+       document.write(" After Changing Year   = " + objDate  + "<br>");
+       objDate.setDate(30);
+       document.write(" After Changing Date   = " + objDate  + "<br>");
+
+       /* To Extract the Date and Timefrom the date object */
+       document.write(objDate.toLocaleString()+ "<br/>");
+       /* To Extract the Date from the date object */
+       document.write(objDate.toLocaleDateString()+ "<br/>");
+       /* To Extract the Time from the date object */
+       document.write(objDate.toLocaleTimeString()+ "<br/>");	
+
+       /* Used to convert the date and time value to string */
+       document.write(objDate.toString()+ "<br/>");
+       /* Used to convert the date and time to string in ISD Format*/
+       document.write(objDate.toISOString() + "<br/>");
+       /* Used to Extract the date from the date object and converts it to string */
+       var sStr = objDate.toDateString();
+       document.write(sStr + "<br>");
+    </script>
+</body>
+</html>

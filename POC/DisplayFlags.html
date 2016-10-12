@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>
+Display Flags
+</title>
+<style>
+select{
+  margin: 40px;
+  width: 10%;   
+}
+img{
+    display: block;
+    margin: auto;
+    width: 30%;
+    height: 30%;	
+}
+</style>
+</head>
+
+<body>
+<form name="myForm">
+<img id="image">
+
+CHOOSE COUNTRY: <select name="Country" onchange=display()>
+<option selected disabled>Choose here</option>
+<option value="india">INDIA</option>
+<option value="australia">AUSTRALIA</option>
+<option value="china">CHINA</option>
+
+
+
+<script>
+function display()
+{
+
+index=document.myForm.Country.selectedIndex;
+countryName=document.myForm.Country.options[index].value;
+
+if(countryName=="india")
+document.getElementById("image").src="C:/Users/lenovo/Desktop/JavaScript Pgms/POC/JS/flag pics/India.png";
+
+else if(countryName=="australia")
+document.getElementById("image").src="C:/Users/lenovo/Desktop/JavaScript Pgms/POC/JS/flag pics/australia.png";
+
+else if(countryName=="china")
+document.getElementById("image").src="C:/Users/lenovo/Desktop/JavaScript Pgms/POC/JS/flag pics/china.png";
+
+}
+</script>
+</form>
+</body>
+</html>

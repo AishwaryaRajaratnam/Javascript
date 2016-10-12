@@ -1,0 +1,13 @@
+<html>
+       <head>
+                <title>  Immediate Mode --- Demo </title>
+       </head>
+       <body>
+               <button onclick="fnDemo()"></button>
+               <script>
+                      function fnDemo(){
+                           document.write("Welcome to Java Script ");
+                      }
+               </script>
+       </body>
+</html>

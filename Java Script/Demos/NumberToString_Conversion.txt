@@ -1,0 +1,19 @@
+<html>
+       <head>
+                <title>  Number To String Conversion  --- Demo </title>
+       </head>
+       <body>
+               <script>
+                       var iNo = 12.45678;
+                       /* Using a global Object */
+                       document.write(" String()                = " +  String(iNo) + "<br>");
+                       document.write("  toString()            = " + iNo.toString()  + "<br>");
+                       /* Number of Decimal Digits */
+                       document.write("  toFixed()             = " +  iNo.toFixed(2) + "<br>");
+                       /* Number  to String in Exponential Format */
+                       document.write(" toExponential()  = " +  iNo.toExponential(3) + "<br>"); 
+                       /* Number of digits to be taken */
+                       document.write(" toPrecision()        = " +  iNo.toPrecision(5) + "<br>");
+              </script> 
+       </body>
+</html>         

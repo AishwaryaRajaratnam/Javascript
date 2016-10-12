@@ -1,0 +1,14 @@
+<html>
+      <head>
+               <title> CallBack Method Demo </title>
+      </head>
+      <body>
+              <script>
+                      var aiNumber = [10,12,14,16,18,20,22];
+                      /* CallBack Method -- Function taking an Anonymous Function as an Argument */
+                       aiNumber.forEach( function(iValue,iIndex){
+                           document.write( " iIndex[ " + iIndex + "] = " + iValue + "<br>");
+                      });
+              </script>
+      </body>
+</html>

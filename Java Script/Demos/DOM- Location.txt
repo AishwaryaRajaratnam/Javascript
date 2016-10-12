@@ -1,0 +1,9 @@
+<html>
+       <head>
+              <title> Location --- Demo </title>
+       </head>
+       <body>
+              <input type="button" value="Google" onClick="location.replace('http://www.google.com')">
+              <input type="button" value="Refresh page" onClick="location. reload()">
+        </body>
+</html>

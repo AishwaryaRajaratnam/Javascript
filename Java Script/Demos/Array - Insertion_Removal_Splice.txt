@@ -1,0 +1,25 @@
+<html>
+      <head>
+               <title> Arrays Sort Demo </title>
+      </head>
+      <body>
+              <script>
+                      var asStr = ["Magesh","Bhoj","Vijayendra","Savitha","Gayathri","Mallika"];
+ 
+	   /* To insert an element at the 2nd Index of the Existing Array */
+	   asStr.splice(2,0,"Surya","Jason");
+                      document.write(" asStr                 = " + asStr + "<br>");
+
+                       /* To Remove an Element at the 3rd Index of the Existing Array */
+                       asStr.splice(3,1,"Sila");
+                       document.write("asStr                 = " + asStr + "<br>");
+
+                      var asString = [["Magesh","Bhoj"],["Vijayendra","Savitha"],["Gayathri","Mallika"]];
+                      document.write(" asString                  =  " + asString  + "<br>");
+                      asString[1].splice(1,0,"Surya");
+                      document.write(" asString                  =  " + asString  + "<br>");
+                      asString[1].splice(1,1,"Sila");
+                      document.write(" asString                  =  " + asString  + "<br>");
+              </script>
+      </body>
+</html>

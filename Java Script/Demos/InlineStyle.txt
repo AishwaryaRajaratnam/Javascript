@@ -1,0 +1,7 @@
+<html>
+       <head>
+                <title>  Inline Style --- Demo </title>
+       </head>
+       <body onload="alert('Feeling Sleepy After Lunch');"> 
+       </body>
+</html>

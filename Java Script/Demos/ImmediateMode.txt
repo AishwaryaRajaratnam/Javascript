@@ -1,0 +1,10 @@
+<html>
+       <head>
+                <title>  Immediate Mode --- Demo </title>
+       </head>
+       <body>
+               <script>
+                       document.write(" Welcome to Java Script Programming ");
+               </script>
+       </body>
+</html>

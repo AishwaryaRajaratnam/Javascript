@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>
+Array Operations
+</title>
+</head>
+
+<body>
+<script>
+        
+var arr1=[10,20,14,16,18,12];
+var arr2=new Array(4);
+arr2[0]=2;
+arr2[1]=4;
+arr2[2]=6;
+arr2[3]=8;
+document.write("Array arr1:  "+arr1+"<br>");
+document.write("Array arr2:  "+arr2+"<br>");
+//To check if its array
+document.write(Array.isArray(arr2)+"<br>");
+document.write(arr1 instanceof Array);
+document.write("<br>");
+document.write(issArray(arr2));
+function issArray(arr)
+{
+//console.log(arr.constructor.toString());
+return arr.constructor.toString().indexOf("Array")>-1;
+
+}
+//Insert
+arr2.push(100);
+arr2.unshift(1);
+arr2.splice(2,0,45,46);
+
+arr2.splice(1,0,11,111);
+arr2.pop();
+arr2.shift();
+arr2.splice(2,3,9,99);
+arr2.copyWithin(2,0,2);
+document.write("<br>Array arr2:  "+arr2+"<br>");
+arr1.sort(function(a,b){ return a-b;});
+document.write("Array arr1:  "+arr1+"<br>");
+//search
+function fnValidate(num)
+{
+return num>18;
+}
+arr1.push(22);
+document.write(arr1.findIndex(fnValidate));
+//iterate
+function fnIterate(value,index)
+{
+document.write("Index["+index+"]="+value);
+}
+arr1.forEach(fnIterate);
+document.write("<br>");
+//manipulate
+document.write(arr1.map(Math.sqrt));
+
+
+var newArr=arr1.slice(-3,-1);
+document.write("NewArray :  "+newArr+"<br>");
+
+document.write(newArr.join('*'));
+</script>
+</body>
+</html>

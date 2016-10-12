@@ -1,0 +1,27 @@
+<html>
+       <head>
+               <title> Dynamically Adding Button Component </title>
+       </head>
+       <body>
+               <form id="myFrm">
+                        <input type="button" id="btnClk" value="AddButtons" onclick="fnAddButton()"></input>
+               </form>
+               <script>
+                       /* Creating an Index Value */
+                       iIndex=0;
+                        function fnAddButton(){
+                               /* Create an DOM Component Dynamically */
+                               var cCtrl = document.createElement("input");
+
+                               /* Assigning values to Different Attributes of the Element */
+                               cCtrl.setAttribute("type","button");
+                               cCtrl.setAttribute("id", "btnAdd" + iIndex);
+                               cCtrl.setAttribute("value","button"+iIndex);
+                                iIndex = iIndex + 1;
+                               /* To add a component to the Form */
+                               var sFrm = document.getElementById("myFrm");
+                               sFrm.appendChild(cCtrl);
+                       }
+               </script>
+       </body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>
+World Flags
+</title>
+</head>
+
+<body>
+<h1 align="center">WORLD FLAGS</h1>
+<img src="C:\Users\AI294731\Documents\JS\flag pics\India.png" alt="Indian Flag" style="width:158px;height:158px;" onmouseover=display("india") onmouseout=display()>
+<img src="C:\Users\AI294731\Documents\JS\flag pics\australia.png" alt="Australian Flag" style="width:158px;height:158px;" onmouseover=display("australia") onmouseout=display()>
+<img src="C:\Users\AI294731\Documents\JS\flag pics\china.png" alt="China Flag" style="width:158px;height:158px;" onmouseover=display("china") onmouseout=display()><br><br>
+<input type="text" id="name" readonly></input>
+
+
+<script>
+display();
+function display(name)
+{
+if(name=="india")
+document.getElementById("name").value="INDIA";
+else if(name=="australia")
+document.getElementById("name").value="AUSTRALIA";
+else if(name=="china")
+document.getElementById("name").value="CHINA";
+else
+document.getElementById("name").value="UNIVERSE";
+}
+</script>
+</body>
+</html>

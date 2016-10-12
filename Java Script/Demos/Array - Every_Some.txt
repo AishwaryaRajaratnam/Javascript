@@ -1,0 +1,34 @@
+<html>
+      <head>
+               <title> Arrays Sort Demo </title>
+      </head>
+      <body>
+              <script>
+                      var aiNumber = [10,12,14,16,18,20,22];
+           
+                      /* Function to validate */
+                      function fnValidate(iNo){
+                            return iNo > 18;
+	   }
+ 
+                      /* To check whether all the Elements in the Array satisfies the fnValidate() */
+	   document.write("  Validate Result    = " + aiNumber.every(fnValidate) + "<br>");
+
+	    /* To Check whether atleast one element of the Array Satisfies the fnValidate(); */
+	    document.write(" Validate Result    =  " + aiNumber.some(fnValidate) + "<br>");
+
+	     /* Returns the elements in the Array which satisfies the given condition */
+	     document.write(" Validated Elements  = " + aiNumber.filter(fnValidate) + "<br>");
+
+	      /* Returns the First element of the Array that Satisifes the given Condition */
+                         document.write(" First Validated Elements  = " + aiNumber.find(fnValidate)  + "<br>");
+		
+	      /* Returns the First Index element of the Array that satisifes the given Condition */
+                         document.write(" First Validated Elements  = " + aiNumber.findIndex(fnValidate)  + "<br>");
+		
+
+
+                       
+              </script>
+      </body>
+</html>

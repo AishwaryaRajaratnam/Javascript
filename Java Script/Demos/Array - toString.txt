@@ -1,0 +1,22 @@
+<html>
+      <head>
+               <title> Arrays Sort Demo </title>
+      </head>
+      <body>
+              <script>
+                      var asStr = ["Magesh","Bhoj","Vijayendra","Savitha","Gayathri","Mallika"];
+                      /* Convert an Array to a String */
+                      var sStr = asStr.toString();
+                      document.write(" sStr                 = " + sStr + "<br>");
+                      document.write(" typeof  sStr   = " + typeof sStr + "<br>");
+                      /* We can specify a Seperator in join() by default , acts as a seperator */
+                      var sString = asStr.join('*');
+                      document.write(" sString            = " + sString + "<br>");
+                      document.write(" type of sString            = " + typeof sString + "<br>"); 
+
+	    var asString = [["Magesh","Bhoj"],["Vijayendra","Savitha"],["Gayathri","Mallika"]];
+                       document.write(asString.toString() + "<br>" + "typeof  = " + typeof asString.toString() + "<br>");
+                       document.write(asString.join('*') + "<br>" + "typeof  = " + typeof asString.join('*') + "<br>");
+              </script>
+      </body>
+</html>

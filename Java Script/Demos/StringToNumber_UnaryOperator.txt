@@ -1,0 +1,14 @@
+<html>
+       <head>
+                <title>  Variable  --- Demo </title>
+       </head>
+       <body>
+               <script>
+                       var iNo = "12", iRes = +iNo;
+                        iResult = iRes  + 3;
+                       document.write(" type of iNo = " + typeof iNo + "<br>");
+                       document.write(" type of iRes = " + typeof iRes + "<br>");
+                       document.write(" Value of iResult = " + iResult + "<br>");
+              </script> 
+       </body>
+</html>

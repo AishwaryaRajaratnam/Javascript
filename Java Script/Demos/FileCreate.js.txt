@@ -1,0 +1,12 @@
+/* Import fs modules for File Read and Write */
+var objFileMod = require("fs");
+var sStr = 'Our Training is going to get over';
+
+/* Create a writable stream  */
+var objFileCreate = objFileMod.createWriteStream('Trng.txt');
+
+/* Write the data to stream with encoding to be utf8 */
+objFileCreate.write(sStr,'UTF8');
+
+/* To end the stream */
+objFileCreate.end();

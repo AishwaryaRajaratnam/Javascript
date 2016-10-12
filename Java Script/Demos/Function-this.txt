@@ -1,0 +1,26 @@
+<html>
+      <head>
+               <title> Function - this Demo </title>
+      </head>
+      <body>
+              <script>
+                      function fnDemo(){
+                           document.write(" JavaScript --- 2ndDay Training <br> ");
+                       }
+                       /* Above function can be invoked */
+                       fnDemo();
+                       window.fnDemo();
+
+                       /* Function to Demonstrate the this */
+                       function fnDmoThis(){
+                             return this;
+                       }
+                       document.write(" returnValue of this   = " + fnDmoThis() + "<br>");
+
+                       /* Invoking the Function using a Function Constructor */
+                       var objFnDemo = new fnDmoThis();
+                       document.write(" objFnDemo              = "  + objFnDemo + "<br>");
+
+              </script>
+      </body>
+</html>

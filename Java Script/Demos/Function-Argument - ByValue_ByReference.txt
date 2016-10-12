@@ -1,0 +1,33 @@
+<html>
+      <head>
+               <title> Function - Passby Value and Reference Demo </title>
+      </head>
+      <body>
+              <script>
+                      function fnSwapValue(iFirst,iSecond){
+                            iFirst = iFirst + iSecond;
+	         iSecond = iFirst - iSecond;
+                            iFirst = iFirst - iSecond;
+                            document.write(" iFirst   =  " + iFirst  + " " + "iSecond = " + iSecond + "<br>");
+                      }
+                      var iFirst=3,iSecond=9;
+                      document.write(" Before Calling a Method " + "<br>");
+                      document.write(" iFirst   =  " + iFirst  + " " + "iSecond = " + iSecond + "<br>");
+                      fnSwapValue(iFirst,iSecond);
+                      document.write(" After Calling a Method " + "<br>");
+                      document.write(" iFirst   =  " + iFirst  + " " + "iSecond = " + iSecond + "<br>");
+
+                      function fnChange(aiNum){
+                           for(iIndex=0;iIndex < aiNum.length;iIndex++){
+                                   aiNum[iIndex] = aiNum[iIndex] + 10;
+                           }
+                      }
+      
+                      var aiNumber = [10,20,30,40,50,60];
+                      document.write(" Before Calling the Method aiNumber = " + aiNumber + "<br>");
+                      fnChange(aiNumber);
+                      document.write(" After Calling the Method aiNumber    = " + aiNumber + "<br>");
+
+              </script>
+      </body>
+</html>

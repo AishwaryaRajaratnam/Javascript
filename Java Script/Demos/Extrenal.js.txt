@@ -1,0 +1,2 @@
+var iNo=12;
+document.write("Value of iNo = " + iNo);

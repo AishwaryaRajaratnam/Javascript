@@ -1,0 +1,28 @@
+<html>
+        <head>
+                <title> Object  - Property - ReadWrite Demo </title>
+        </head>
+        <body>
+                <script>
+                        "use strict"; 
+                        /* Object with Properties and Methods  */
+                        var myObj = {
+		iNo:12,
+		sName:'Magesh'
+	      };
+                         /* To create a Readonly property to an existing object */
+                         Object.defineProperty(myObj, 'sLoc', {value:'CDC' , enumerable: true,writable: false,configurable:true});
+                         for(var sKeys in myObj){
+                              document.write( sKeys  +   " : " + myObj[sKeys]  + "<br>");
+                         }
+                         /* Converting a Readonly Property to Writable and viceversa */
+                         Object.defineProperty(myObj,'sLoc',{writable:true});
+                         Object.defineProperty(myObj,'sName',{writable:false});
+                         myObj.sLoc = 'CDC5';
+                         for(var sKeys in myObj){
+                              document.write( sKeys  +   " : " + myObj[sKeys]  + "<br>");
+                         }
+                         myObj.sName = 'Jason';
+                </script>
+        </body>
+</html>

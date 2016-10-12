@@ -1,0 +1,42 @@
+<html>
+      <head>
+               <title> Arrays Demo </title>
+      </head>
+      <body>
+              <script>
+                      var aiNumber = [10,12,14,16];
+
+                      document.write("typeof aiNumber = " + typeof aiNumber + "<br>");
+                      var aiNo = new Array(3);
+                      /* We can assign an object, function and an another Array as a value
+	         to An array */
+                      aiNo[0] = Date.now();
+                      aiNo[1] = fnDemo();
+                      aiNo[2] = aiNumber;
+                      document.write(" aiNo contents  = " + aiNo + "<br>");
+                      document.write(" Length of aiNo = " + aiNo.length + "<br>");
+                      document.write(" aiNo[2]   = " + aiNo[2] + "<br>");
+                      document.write(" aiNo[2][0] = " + aiNo[2][0] + "<br>");
+                      document.write(" aiNo[2].length  = " + aiNo[2].length + "<br>");
+                      function fnDemo(){
+                              return 1;
+                      }
+                      /* Code to create an 2 Dimensional Array */
+                      var aiMatrix = [ [1,2],[4,5],[6,7]];
+                      document.write(" aiMatrix.length     = " + aiMatrix.length + "<br>");
+                      document.write(" aiMatrix[0].length = " + aiMatrix[0].length + "<br>");
+
+                       var aiTwoD = new Array(3);
+                       for(iIndex=0;iIndex<aiTwoD.length;iIndex++)
+                            aiTwoD[iIndex] = new Array(4);
+
+                       /* Code to Check whether it is an array */
+                      document.write(" aiNumber  = " + Array.isArray(aiNumber) +  "<br>");
+                      document.write(aiNumber instanceof Array);
+                      document.write(isArray(aiNo[2]));
+                      function isArray(aiArr){
+                              return aiArr.constructor.toString().indexOf("Array") > -1;
+                      }
+              </script>
+      </body>
+</html>

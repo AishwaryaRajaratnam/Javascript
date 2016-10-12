@@ -1,0 +1,33 @@
+<html>
+        <head>
+                <title> Object  - Property - ReadWrite Demo </title>
+        </head>
+        <body>
+                <script>
+                        /* "use strict";  */
+                        /* Object with Properties and Methods  */
+                        var myObj = {
+		iNo:12,
+		sName:'Magesh',
+		fnDisplay:function(){
+                                            document.write(" iNo     = " + this.iNo  + " sName = " + this.sName + "<br>");
+		}
+	      };
+                         myObj.iNo = 21;myObj.sName='Jananie';
+                         /* Displays the complete content of the Object */
+                         for(var sKeys in myObj){
+                              document.write(sKeys  +  " : " + myObj[sKeys]  + "<br>");
+                         }      
+                         var sKeys = Object.keys(myObj);
+                         document.write(" Keys in myObj    = " + sKeys  + "<br>");
+
+                         /* To make an Object Readonly */
+                         Object.freeze(myObj);
+                          myObj.iNo = 14;myObj.sName='Raji';
+                         /* Displays the complete content of the Object */
+                         for(var sKeys in myObj){
+                              document.write(sKeys  +  " : " + myObj[sKeys]  + "<br>");
+                         }
+                </script>
+        </body>
+</html>

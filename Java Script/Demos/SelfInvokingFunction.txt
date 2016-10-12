@@ -1,0 +1,20 @@
+<html>
+      <head>
+               <title> Self Invoking Function Demo </title>
+      </head>
+      <body>
+              <script>
+                       /* Representing a Self Invoking Function */
+                       (function(){
+                            document.write(" Learning JavaScript  <br>");
+	     })();
+
+                        /* Representing a Self Invoking Function with arguments */
+                        var iRes = (function(iFirst,iSecond){
+                                iResult = iFirst + iSecond;
+                                return iResult;
+	      })(3,9);
+                         document.write(" iRes         = "  + iRes  + "<br>");
+              </script>
+      </body>
+</html>

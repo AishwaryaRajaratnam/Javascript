@@ -1,0 +1,18 @@
+<html>
+      <head>
+               <title> Button Component </title>
+       </head>
+       <body>
+                <input type="button"  id="clkMe" value="ClickMe" onclick="fnClick()" onblur="fnBlur()"> </input>
+                <input type ="button" Value="Day3"></input>
+                <script>
+                       function fnClick(){
+                              alert(' Button Clicked ');
+                       }
+                       function fnBlur(){
+                              document.getElementById("clkMe").disabled = true;
+                              alert(' Lost Focus on the Button ');
+                       }
+                </script>
+       </body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+      <head>
+               <title> Function Constructor Demo </title>
+      </head>
+      <body>
+              <script>
+                       /* Representing a Function using Function Constructor */
+                       var sStr = new Function ("return ' Welcome to JavaScript Training' ");
+                        document.write(" sStr()             =  " + sStr() + "<br>");
+                        document.write(" sStr                =  " + sStr  + "<br>");
+                        /* Representina a Function using a Function Parameterized Constructor */
+                        var iRes = new Function("iFirst","iSecond", "iRes = iFirst + iSecond;return iRes");
+                        document.write(" iRes(3,9)        = " + iRes(3,9)  + "<br>");   
+              </script>
+      </body>
+</html>

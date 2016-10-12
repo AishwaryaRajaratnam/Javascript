@@ -1,0 +1,27 @@
+/* Import the fs module to read from the File */
+var objFileModule = require("fs");
+var sFileContent = '';
+
+/*  Create an object to read the content from the specified file */
+var objFileRead  = objFileModule.createReadStream('Trng.txt');
+
+/* To specify the encoding format for the file contnets that are read */
+objFileRead.setEncoding('UTF8');
+
+/* Need to specfiy the Event Handlers namely
+	data	: To Read the content from the File
+	end	: To identify the End of File
+	error	: To have any error messages while reading the File */
+objFileRead.on('data', function(sFileRead) {
+     sFileContent += sFileRead;
+});
+
+objFileRead.on('end',function(){
+   console.log(sFileContent);
+});
+
+objFileRead.on('error', function(refError){
+   console.log(refError.stack);
+});
+
+console.log("Program Ended"); 

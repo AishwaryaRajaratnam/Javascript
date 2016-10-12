@@ -1,0 +1,60 @@
+<html>
+       <head>
+               <title> String Methods Demo </title>
+        </head>
+        <body>
+                 <script>
+                           var objString = new String("Wipro Technologies");
+                           var sStr = "Talent Transformation - \" Center For Technology Excellence \" ";
+                           document.write(" sStr              = " + sStr + "<br>");
+                           /* To Find the Length of the string */
+                           document.write(" Length of the Given String  = " + objString.length + "<br>");
+                           document.write(" Length of the Given String  = " + sStr.length + "<br>");
+
+	         /* To Extract a character from the given string */
+                            document.write(" First Character in the String = " + sStr.charAt(0) + "<br>");
+                            document.write(" First Character ASCII Value  = " + sStr.charCodeAt(0) + "<br>");
+
+	           /* To Search for a pattern in the Given String */
+                              document.write(" indexOf                 = " + sStr.indexOf('T') + "<br>");
+                              document.write(" lastIndexOf          = " + sStr.lastIndexOf('T') + "<br>");
+                              document.write(" search                    = " + sStr.search('T')  + "<br>");
+
+                                /* Extract Fewcharacters from the Given String */
+                              document.write(" substring                = " + sStr.substring(12,18) + "<br>");
+                              document.write(" substr                      = " + sStr.substr(12,18) + "<br>");
+                              document.write(" slice                          = " + objString.slice(6,13) + "<br>");
+                              document.write(" slice with (-)ve      = " + objString.slice(-12) + "<br>");
+                              document.write(" slice                          = " + objString.slice(-12,-6) + "<br>");
+
+                               /* Replace a Character */
+                               document.write(" replace                  = " + sStr. replace('T','G')  + "<br>");
+	            document.write(" Afte Replace sStr=" + sStr + "<br>");
+                               document.write(" replace                  = " + sStr. replace(/T/g,'G')  + "<br>");
+
+                                /* To Concatenate the Given String  */
+                                document.write(" Concat                  = " + objString.concat(sStr) + "<br>");
+                                document.write(" objString              = " + objString + "<br>");
+
+                                /* To Convert a String to an Array */
+                                var sString = "T,A,L,E,N,T";
+                                var aStr = sString.split(",");
+                                document.write(" aStr   = " + aStr[1]+ "<br>");
+
+                                 /* Convert a Number to a String */
+                                 var iNo = 1.34567;
+                                 document.write("String()                   = "  + String(iNo)  + "<br>");
+                                 document.write("toFixed()                = "  + iNo.toFixed(2)  + "<br>");
+                                 document.write("toExponential()   = "  + iNo.toExponential(3)  + "<br>");
+                                 document.write("toPrecision()         = "  + iNo.toPrecision(2)  + "<br>");
+
+                                 /* Convert a Date to a String */
+                                 document.write("String()                   = "  + String(Date())  + "<br>");
+                                 document.write("toString()               = "  + (Date()).toString()  + "<br>");
+                                 var objDate = new Date();
+                                 document.write("toDateString()     = "  + objDate.toDateString()  + "<br>");
+                                 document.write("toTimeString()     = "  + objDate.toTimeString()  + "<br>");
+                                 
+                </script>
+        </body>
+</html>

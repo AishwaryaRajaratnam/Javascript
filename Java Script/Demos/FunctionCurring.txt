@@ -1,0 +1,24 @@
+<html>
+      <head>
+               <title> Function Currying Demo </title>
+      </head>
+      <body>
+              <script>
+                      function fnCompare(iFirst,iSecond,iThird){
+                            if (iFirst === undefined)
+                                iFirst = 3;
+                            else if (iSecond === undefined)
+                                iSecond = 6;
+                            else if (iThird === undefined)
+                                iThird = 12;
+                             if ((iFirst > iSecond) && (iFirst > iThird)) 
+                                 document.write(" iFirst is Greater  <br> " + iFirst +" " + iThird + "<br>" );
+                             else if (iSecond > iThird)
+                                  document.write(" iSecond is Greater <br> ");
+                             else
+                                  document.write(" iThird is Greater <br> ");
+                      }
+                      fnCompare(21,6);
+              </script>
+      </body>
+</html>

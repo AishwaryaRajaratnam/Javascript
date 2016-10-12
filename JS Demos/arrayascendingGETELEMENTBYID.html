@@ -1,0 +1,38 @@
+<html>
+<head>
+</head>
+<title>
+array
+</title>
+<body>
+<p id="demo"></p>
+<script>
+
+arr=[1,19,13];
+for(j=0;j<arr.length;j++)
+{
+for(k=j+1;k<arr.length;k++)
+{
+if(arr[j]>arr[k])
+{
+temp=arr[j];
+arr[j]=arr[k];
+arr[k]=temp;
+}
+}
+}
+document.write("-----ASCENDING ORDER-----"+"<br>");
+for(l=0;l<arr.length;l++)
+{
+document.getElementById("demo").innerHTML=arr[l];
+}
+document.write("-----DESCENDING ORDER-----"+"<br>");
+for(l=arr.length-1;l>=0;l--)
+{
+document.getElementById("demo").innerHTML=arr[l];
+}
+
+</script>
+</body>
+
+</html>

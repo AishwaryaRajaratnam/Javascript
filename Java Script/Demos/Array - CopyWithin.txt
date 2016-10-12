@@ -1,0 +1,18 @@
+<html>
+      <head>
+               <title> Arrays Sort Demo </title>
+      </head>
+      <body>
+              <script>
+                      var asStr = ["Magesh","Bhoj","Vijayendra","Savitha","Gayathri","Mallika"];
+ 
+	   /* Used to copy Array Elements within the array using copyWithin() 
+		1st Parameter 	: Index location where to copy
+		2nd Parameter	: Index location of which element to copy
+		3rd Parameter	: The number of elements to be copied  */
+                      asStr.copyWithin(2,0,3);
+                      document.write("asStr              = " + asStr  + "<br>");
+                       
+              </script>
+      </body>
+</html>

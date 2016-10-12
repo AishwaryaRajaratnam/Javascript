@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>
+amstrong number
+</title>
+</head>
+<body>
+<p id="demo"></p>
+<script>
+var i=153;
+sum=0;
+k=i;
+while(i>0)
+{
+j=i%10;
+sum=(sum+(j*j*j));
+i=parseInt(i/10);
+}
+if(sum==k)
+
+document.getElementById("demo").innerHTML=k+" is amstrong number";
+
+else
+
+
+document.getElementById("demo").innerHTML=k+" is not an amstrong number";
+
+</script>
+</body>
+</html>

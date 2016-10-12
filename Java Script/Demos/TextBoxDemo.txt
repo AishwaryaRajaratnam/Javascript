@@ -1,0 +1,55 @@
+<html>
+         <head>
+                  <title> TextBox Component Validation --- Demo </title>
+         </head>
+         <body>
+                 <input type="text" id="fName" required></input>
+                 <input type ="number" id="iEno" min="1000" max="10000" required></input>
+                 <input type ="password" id="sPassWord" title="Happy Training will over by tomorrow"></input>
+                 <p id="txtStatus"></p>  <p id="noStatus"> </p><p id="noPassword"> </p>
+                 <input type="Button" value="Required Text" onclick="fnReqValidate()" ></input>
+                 <input type="Button" value="Number Range" onclick="fnNoValidate()" ></input>
+                 <input type="Button" value="PasswordCheck" onclick="fnPwdValidate()"></input>
+                  <input type="text" id="sPattern" pattern="[A-Za-z]{3}" title="Three letter country code" required></input>
+                  <p id="txtPtrn"></p>
+                  <input type="Button" value="PatternCheck" onclick="fnPtrnValidate()"></input> 
+          </body>
+         <script>
+                  function fnPtrnValidate(){
+                        var sCtrl = document.getElementById('sPattern');
+                        alert(document.getElementById('sPattern'));
+                        if (sCtrl.checkValidity() == false)
+                             document.getElementById('txtPtrn').innerHTML = "Should have 3 characters ";
+                        else
+                             document.getElementById('txtPtrn').innerHTML = " ";                        
+                  }
+                  function fnPwdValidate(){
+                        var sStr = document.getElementById('sPassWord').value;
+                        if (sStr.length == 0 || sStr.length >= 6)
+                               document.getElementById('noPassword').innerHTML = "Password should be >= 1 and <= 6 Characters";
+                        else    
+	           document.getElementById('noPassword').innerHTML = " ";
+                  }
+                  function fnReqValidate(){
+                        var sCtrl = document.getElementById('fName')
+                        alert(sCtrl.checkValidity());
+                        if (sCtrl.checkValidity() == false){                              
+                              document.getElementById('txtStatus').innerHTML = "Text Box cannot Be Empty";
+                        }
+                        else{
+                              document.getElementById('txtStatus').innerHTML = " Success ";
+	     }	
+                  }
+                  function fnNoValidate(){
+                         var sCtrl = document.getElementById('iEno');
+ 	      if (sCtrl.validity.rangeOverflow)
+                              document.getElementById('noStatus').innerHTML = " Cannot Be >10000 ";
+                         else if (sCtrl.validity.rangeUnderflow)
+                              document.getElementById('noStatus').innerHTML = " Cannot Be < 1000 ";
+                         else if (sCtrl.validity.valueMissing)
+                              document.getElementById('noStatus').innerHTML = " Number should be Between >= 1000 and <= 10000 ";
+                         else
+                              document.getElementById('noStatus').innerHTML = "  ";
+                  }                  
+         </script>
+</html>

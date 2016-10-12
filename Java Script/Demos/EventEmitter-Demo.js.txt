@@ -1,0 +1,23 @@
+// Import events module
+var events = require('events');
+
+
+// Create an eventEmitter object
+var objEventEmitter = new events.EventEmitter();
+
+// Create an event handler as follows
+var userDefinedEvent = function fnDemo() {
+   console.log('Happy WeekEnd');
+}
+
+// Bind the created function with the event handler
+objEventEmitter.on('myEvents', userDefinedEvent);
+ 
+objEventEmitter.on('myEventAnonymous', function(){
+   console.log('Wish You all a Happy WeekEnd and Dashra');
+});
+
+// To Trigger the  Event 
+objEventEmitter.emit('myEvents');
+objEventEmitter.emit('myEventAnonymous');
+console.log("Program Ended.");

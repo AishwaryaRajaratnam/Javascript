@@ -1,0 +1,26 @@
+<html>
+       <head>
+              <title> Converting JavaScript Object to JSON object </title>
+       </head>
+       <body>
+               <script>
+                    function Department(iNo,sName,sLoc){
+                         this.iDeptNo = iNo;
+                         this.sDeptName = sName;
+	      this.sDeptLoc = sLoc;
+                    }
+                    function fnConversion(){
+	        var objDept = new Array();
+	        objDept[0] = new Department(12,"TT","BDC");
+	        objDept[1] = new Department(13,"BAS","CDC");
+	        objDept[2] = new Department(14,"PES","HDC");
+	        objDept[3] = new Department(15,"GMT","KDC");
+
+	         /* Code to convert JavaScript Data to JSON Data */
+	        objJSON = JSON.stringify(objDept);
+	        document.write(" Contens of objJSON  = " + objJSON);
+                     }
+                     fnConversion();
+               </script>
+        </body>
+</html>

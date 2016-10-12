@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>
+Employee Records
+</title>
+</head>
+<body>
+<h1>Employee Details</h1>
+
+
+Employee ID :<input type="text" id="Eid" readonly></input><br><br>
+Name :<input type="text" id="Ename" readonly></input><br><br>
+Contact No :<input type="text" id="Econtact" readonly></input><br><br>
+Location :<input type="text" id="Eloc" readonly></input><br><br>
+
+<input type="button" value="Previous" onClick=displayRecord("Previous")></input>
+<input type="button" value="First" onClick=displayRecord("First")></input>
+<input type="button" value="Last" onClick=displayRecord("Last")></input>
+<input type="button" value="Next" onClick=displayRecord("Next")></input>
+
+
+<script>
+var EmpArray=new Array();
+
+function Employee(id,name,mobile,location)
+{
+this.id=id;
+this.name=name;
+this.mobile=mobile;
+this.location=location;
+}
+var Emp1=new Employee(294731,'Aishu',9962469404,'Bangalore');
+var Emp2=new Employee(194731,'Ani',8862469404,'Hyderabad');
+var Emp3=new Employee(394731,'Ammu',7762469404,'Chennai');
+var Emp4=new Employee(494731,'Nikhil',8962469404,'Bangalore');
+var Emp5=new Employee(594731,'Joji',7662469404,'Noida');
+
+EmpArray.push(Emp1);
+EmpArray.push(Emp2);
+EmpArray.push(Emp3);
+EmpArray.push(Emp4);
+EmpArray.push(Emp5);
+
+i=0;
+displayRecord("First");
+
+function displayRecord(index)
+{
+
+if(index=="First")
+i=0;
+else if(index=="Last")
+i=EmpArray.length-1;
+else if(index=="Previous")
+{
+if(i==0)
+i=EmpArray.length-1;
+else
+i=i-1;
+}
+else if(index=="Next")
+{
+if(i==EmpArray.length-1)
+i=0;
+else
+i++;
+}
+
+document.getElementById('Eid').value= EmpArray[i].id;
+document.getElementById('Ename').value= EmpArray[i].name;
+document.getElementById('Econtact').value= EmpArray[i].mobile;
+document.getElementById('Eloc').value= EmpArray[i].location;
+
+}
+
+</script>
+</body>
+</html>

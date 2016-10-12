@@ -1,0 +1,22 @@
+<html>
+       <head>
+             <title> Exception Handling --- Demo </title>
+       </head>
+       <body>
+             <script>
+                    function fnExceptionDemo(){
+                         try{
+                                fnDemo();
+                         }
+                         catch(refError){
+                              document.write(" Error Message  = " + refError + "<br>");
+                         }
+                         finally{
+                              document.write(" End of Error Block <br>");
+                         }
+                         document.write(" Excellent Learning  <br>");                         
+                    }
+                    fnExceptionDemo();
+             </script>
+       </body>
+</html>

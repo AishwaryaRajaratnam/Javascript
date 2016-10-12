@@ -1,0 +1,13 @@
+<html>
+    <body>
+           <!-- window.open(URL,name,specs,replace) -->
+           <input type ="button" value="Open new window" onClick="NewWin=window.open('','NewWin','width=700,height=500');"><br>
+
+            <!-- HTML Comments : NewWin is the reference  of the new window-->
+            <input type="button" value="Close new window" onClick="NewWin.close();"><br>
+
+             <input type="button" value="Close main window" onClick="window.close();"><br>
+             <input type="button" value="Redirect" onclick="window.location='http://www.wipro.com'"><br>
+     </body>
+</html>
+

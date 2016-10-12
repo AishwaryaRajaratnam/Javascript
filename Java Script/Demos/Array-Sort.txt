@@ -1,0 +1,26 @@
+<html>
+      <head>
+               <title> Arrays Sort Demo </title>
+      </head>
+      <body>
+              <script>
+                      var asStr = ["Magesh","Bhoj","Vijayendra","Savitha","Gayathri","Mallika"];
+                      /* To Sort the contents of the Array */
+                      document.write(" sort                   = "  + asStr.sort()  + "<br>");
+                      document.write(" reverse            = "  + asStr.reverse() + "<br>");
+
+                      var asString = [["Magesh","Bhoj"],["Vijayendra","Savitha"],["Gayathri","Mallika"]];
+                      /* To Sort the 2 Dimensional Array */
+                      for(iIndex=0;iIndex<asString.length;iIndex++){
+                          document.write(" sort                   = " + asString[iIndex].sort()  + "<br>");
+                      }
+
+                      var aiNumber = [10,1,100,2,20,200];
+                       /* To Sort the numeric Array */
+                       document.write(" aiNumber       = " + aiNumber.sort() + "<br>");
+
+                       /* Create our own Method to Sort the Numeric Array */
+                       document.write(" aiNumber       = " + aiNumber.sort(function(a, b){return a - b}) + "<br>");
+              </script>
+      </body>
+</html>

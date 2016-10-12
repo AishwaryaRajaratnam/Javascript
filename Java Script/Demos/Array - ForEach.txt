@@ -1,0 +1,18 @@
+<html>
+      <head>
+               <title> Arrays ForEach and map methods Demo </title>
+      </head>
+      <body>
+              <script>
+                      var aiNumber = [10,12,14,16,18,20,22];
+                       aiNumber.forEach(fnIterate);
+                      /* Function to print the elements of the Array using foreach */
+                      function fnIterate(iValue,iIndex){
+                           document.write( " iIndex[ " + iIndex + "] = " + iValue + "<br>");
+                      }
+
+                      /* To do some manipulation on every element of the Array */
+                      document.write(" map                = "  + aiNumber.map(Math.sqrt) + "<br>");                       
+              </script>
+      </body>
+</html>

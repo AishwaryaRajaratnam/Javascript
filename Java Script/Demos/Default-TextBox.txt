@@ -1,0 +1,21 @@
+<html>
+         <head>
+                  <title> TextBox Component Validation --- Demo </title>
+         </head>
+         <body>
+              <form>
+                 <input type="text" id="fName" required oninvalid="setCustomValidity('TextBox cannot be Empty ')"></input>
+                 <input type="button" value="Click Me"  onclick = "fnCustHelp()"></input>
+              </form>
+              <script>
+                    function fnCustHelp(){
+                           var sCtrl = document.getElementById('fName');
+                           alert(' Inside ');
+                           sCtrl.setCustomValidity(" Learned JavaScript ");
+                           if (sCtrl.checkValidity() == false){
+                                  document.getElementById('fName').oninvalid = sCtrl.validationMessage;
+                           }
+                    }
+          </script>
+    </body>
+</html>

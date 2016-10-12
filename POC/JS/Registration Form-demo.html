@@ -1,0 +1,74 @@
+
+<html>
+<head>
+<title>
+Registration Form-demo
+</title>
+</head>
+<body>
+
+<p id="para"></p>
+<form name="MyForm" method="get" align="center">
+<h1>Registration Form</h1><br><br>
+EMPLOYEE ID : <input type="text" name="empId" title="Enter the 6 digit Employee Id" pattern="[0-9]{6}"></input><br><br>
+FIRST NAME : <input type="text" name="fname"></input><br><br>
+LAST NAME :  <input type="text" name="lname"></input><br><br>
+GENDER : <input type="radio" name="radcol" value="male">MALE</input>
+<input type="radio" name="radcol" value="female">FEMALE</input><br><br>
+MOBILE NO :  <input type="text" name="mobile" title="Enter the 10 digit Mobile Number"></input><br><br>
+ADDRESS  :   <input type="textarea" name="address"></input><br><br>
+<input type="button" value="SUBMIT" onClick="formValidate()"></input>
+
+</form>
+
+<script>
+
+function formValidate()
+{
+var empid=document.MyForm.empId;
+var fname=document.MyForm.fname.value;
+var lname=document.MyForm.lname.value;
+var mobile=document.MyForm.mobile.value;
+var address=document.MyForm.address.value;
+
+var fname_regEx=/^[a-zA-Z]{2,30}$/;
+var lname_regEx=/^[a-zA-Z ]{1,30}$/;
+
+var errorMsg="";
+
+if(empid.value.length==0 || empid.checkValidity()==false)    	
+errorMsg=errorMsg.concat("EMPLOYEE_ID ");
+
+if(!fname_regEx.test(fname))
+errorMsg=errorMsg.concat("FIRSTNAME ");
+
+
+if(!lname_regEx.test(lname))
+errorMsg=errorMsg.concat("LASTNAME ");
+
+if((document.MyForm.radcol[0].checked==false && document.MyForm.radcol[1].checked==false))
+errorMsg=errorMsg.concat("GENDER ");
+
+if(mobile.length!=10)
+errorMsg=errorMsg.concat("MOBILE ");
+
+if(address.length==0)
+errorMsg=errorMsg.concat("ADDRESS ");
+
+
+if(errorMsg=="")
+{
+alert('Successfully Registered..!');
+document.MyForm.reset();
+}
+else
+alert('Please enter valid values for : '+errorMsg);
+
+
+
+
+}
+
+</script>
+</body>
+</html>

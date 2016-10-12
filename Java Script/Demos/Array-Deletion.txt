@@ -1,0 +1,29 @@
+<html>
+      <head>
+               <title> Arrays Demo </title>
+      </head>
+      <body>
+              <script>
+                      var aiNumber = [10,12,14,16];
+                      
+                      /* To Remove an Element from an Existin Array */
+                      aiNumber.pop();
+                      document.write(" aiNumber    = "  + aiNumber  + "<br>");
+	   aiNumber.shift();
+                      document.write(" aiNumber    = " + aiNumber  + "<br>");
+                      /* Remove an Element not the memory 
+		delete aiNumber[0];  */
+
+                      var aiMatrix = [[1,2],[3,4,5,6],[7,8]];
+                      /* To Remove an Element From a 2Dimensional Array */
+                      aiMatrix.pop();
+                      document.write(" aiMatrix        = " + aiMatrix    + "<br>");
+                      aiMatrix.shift();
+                      document.write(" aiMatrix        = " + aiMatrix    + "<br>");             
+                      aiMatrix[0].pop();
+                      document.write(" aiMatrix        = " + aiMatrix    + "<br>");
+                      aiMatrix[0].shift();
+                      document.write(" aiMatrix         = " + aiMatrix   + "<br>");
+              </script>
+      </body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+      <body>
+                  Insdie Demo.html
+                  <script>
+                           var sLoc = String(window.location);
+                           document.write(typeof sLoc + " <br>");
+                           var iStart = sLoc.indexOf('=') + 1;
+                           iEnd = sLoc.lastIndexOf("&");
+                           if (iEnd  < 0){
+                                sStr = sLoc.substring(iStart);
+                           }
+                           else{
+                                 sStr = sLoc.substring(iStart,iEnd);
+                           }
+                           document.write(sStr  + "<br>");
+                  </script>
+      </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+        <head>
+                <title> Prototype Chaining Demo </title>
+         </head> 
+         <body>
+                <script>
+                         function Department(iDno,sDname,sLoc){
+                                this.iDno = iDno;
+                                this.sDname = sDname;
+                                this.sLoc = sLoc;
+                                this.fnDisp = function(){
+                                       document.write(" iDno   =  " + this.iDno + " sDname =  " + this.sDname + " sLoc =  " + this.sLoc + "<br>");
+                                 }
+                         }
+                         function Employee(iEno,sName){
+                                 this.iEno = iEno;
+                                 this.sName = sName;
+                         }
+                         Employee.prototype = new Department(21,'TT','EC4');
+                         var objEmployee = new Employee(12,'Magesh');
+                         var sKeys = Object.keys(objEmployee);
+                         document.write(sKeys + "<br>");
+                         document.write(" iDno          = " + objEmployee.iDno + "<br>");
+                         objEmployee.fnDisp();
+                  </script>
+          </body>
+</html>

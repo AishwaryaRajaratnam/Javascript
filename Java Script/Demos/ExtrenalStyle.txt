@@ -1,0 +1,9 @@
+<html>
+       <head>
+                <title>  Inline Style --- Demo </title>
+       </head>
+       <body> 
+              <script src="Extrenal.js">
+              </script>
+       </body>
+</html>

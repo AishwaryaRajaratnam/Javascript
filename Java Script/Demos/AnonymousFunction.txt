@@ -1,0 +1,20 @@
+<html>
+      <head>
+               <title> Anonymous Function Demo </title>
+      </head>
+      <body>
+              <script>
+                       var sStr = function (){
+                             return " Welcome to JavaScript Training ";
+                        }
+                        document.write(" sStr()             =  " + sStr() + "<br>");
+                        document.write(" sStr                =  " + sStr   + "<br>");
+
+                        var iRes = function(iFirst,iSecond){
+                                var iResult = iFirst + iSecond;
+                                document.write(" Value of iResult     = " + iResult);
+                        }
+                        iRes(3,9) ;
+              </script>
+      </body>
+</html>

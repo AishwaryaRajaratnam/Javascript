@@ -1,0 +1,27 @@
+// Import events module
+var objEvents = require('events');
+
+
+// Create an eventEmitter object
+var objEventEmitter = new objEvents.EventEmitter();
+
+// Create an event handler using any user defined function
+var userDefinedEvent = function fnDemo() {
+   console.log('Learned JavaScript');
+}
+
+/* Add an Event to the EventEmitter class by specifying an Listener name */
+objEventEmitter.on('myEventAnonymous', function(){
+   console.log('Wish You all a Happy WeekEnd and Dashra');
+});
+
+/* To Add more than one events to the created EventListeners */
+objEventEmitter.addListener('myEventAnonymous',userDefinedEvent);
+
+/* To Trigger the  Events on the created EventListeners */
+objEventEmitter.emit('myEventAnonymous');
+
+/* To count the Number of Listeners for the specified Event */
+var iCount = objEvents.EventEmitter.listenerCount(objEventEmitter,'myEventAnonymous');
+console.log(' Number of Events = ' + iCount);
+console.log("Program Ended.");

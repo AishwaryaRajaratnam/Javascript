@@ -1,0 +1,15 @@
+<html>
+       <head>
+               <title> Converting JSON Data to JavaScript Data </title>
+       </head>
+       <body>
+               <script>
+                      var jsonArray ='[10,12,14,16,18]';
+                      var aiNo = JSON.parse(jsonArray);
+                      document.write(" Contents of jsonArray  = " + jsonArray + "<br>");
+                      document.write(" Checking for an aiNo     = " + Array.isArray(aiNo) + "<br>");
+                      for(iIndex=0;iIndex<aiNo.length;iIndex++)
+   	          document.write(aiNo[iIndex] + "<br>");
+               </script>
+       </body>
+</html>

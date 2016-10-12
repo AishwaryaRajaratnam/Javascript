@@ -1,0 +1,11 @@
+var magi= require("http");
+
+magi.createServer(function (request, response) {
+   response.writeHead(200, {'Content-Type': 'text/html'});
+   response.write(" Wipro Technologies <br>");
+   response.write(" Talent Transformation ");
+   response.end();
+}).listen(3009);
+
+// Console will print the message
+console.log('Server running at http://localhost:3009/');

@@ -1,0 +1,103 @@
+<head>
+<head>
+<title>
+Calculator
+</title>
+</head>
+
+<body>
+<form name="myForm">
+<table border=2>
+<tr>
+<td colspan=4><input type="text" id="input"></input></td>
+</tr>
+
+<tr>
+<td><input type="button" value="7" onClick=append("7")></input></td>
+<td><input type="button" value="8" onClick=append("8")></input></td>
+<td><input type="button" value="9" onClick=append("9")></input></td>
+<td><input type="button" value="+" onClick=append("+")></input></td>
+</tr>
+<tr>
+<td><input type="button" value="4" onClick=append("4")></input></td>
+<td><input type="button" value="5" onClick=append("5")></input></td>
+<td><input type="button" value="6" onClick=append("6")></input></td>
+<td><input type="button" value="-" onClick=append("-")></input></td>
+</tr>
+<tr>
+<td><input type="button" value="1" onClick=append("1")></input></td>
+<td><input type="button" value="2" onClick=append("2")></input></td>
+<td><input type="button" value="3" onClick=append("3")></input></td>
+<td><input type="button" value="*" onClick=append("*")></input></td>
+</tr>
+<tr>
+<td><input type="button" value="0" onClick=append("0")></input></td>
+<td><input type="button" value="=" onClick=append("=")></input></td>
+<td><input type="button" value="C" onClick=append("C")></input></td>
+<td><input type="button" value="/" onClick=append("/")></input></td>
+</tr>
+</table>
+</form>
+
+
+<script>
+arr=new Array();
+function append(data)
+{
+var ip=document.getElementById("input");
+
+if(data=="C")
+	ip.value="";
+else if(data=="=")
+	{ 
+	ip.value=eval(ip.value);
+	}
+else
+	{
+	if(ip.value.length==0)
+	{
+	ip.value=data;
+	arr.push(data);
+	}
+	else
+	{
+	ip.value+=data;
+	arr.push(data);
+	}
+	}
+}
+
+/*function calculate(arr)
+{
+temp=0;
+var ele=arr.shift();
+while(ele!="+" && ele!="-" && ele!="*" && ele!="/")
+{
+temp=temp*10+Number(ele);
+ele=arr.shift();
+}
+
+while(arr.length>0)
+{
+
+var b=0;
+var ele=arr.shift();
+while(ele!="+" && ele!="-" && ele!="*" && ele!="/")
+{
+b=b*10+Number(ele);
+ele=arr.shift();
+}
+if(op=="+")
+temp+=b;
+else if(op=="-")
+temp-=b;
+else if(op=="*")
+temp*=b;
+else if(op=="/")
+temp/=b;
+}
+return temp;
+}*/
+</script>
+</body>
+</head>

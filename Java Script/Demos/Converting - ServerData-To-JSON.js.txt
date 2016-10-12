@@ -1,0 +1,7 @@
+var refBuffer = new Buffer('Learning Node.js');
+var sStr = refBuffer.toString('ascii');
+console.log(sStr);
+//var refJSON = JSON.stringify(sStr);
+/* Default Format for Node.js is utf-8 */
+var refJSON = JSON.stringify(refBuffer.toString());
+console.log(refJSON);

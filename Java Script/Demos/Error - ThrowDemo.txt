@@ -1,0 +1,26 @@
+<html>
+       <head>
+             <title> Exception Handling --- Demo </title>
+       </head>
+       <body>
+             <script>
+                    function fnExceptionDemo(){
+                         var iNum = 10, iDen=0,iResult=0;
+                         try{
+                              if (iDen <= 0)
+                                  throw "Divide By Zero Error ";
+                              else
+                                  iResult = iNum / iDen;
+                         }
+                         catch(refError){
+                              document.write(" Error Message  = " + refError + "<br>");
+                         }
+                         finally{
+                              document.write(" iResult                 = " + iResult + "<br>");
+                         }
+                         document.write(" Learned JavaScript  <br>");                         
+                    }
+                    fnExceptionDemo();
+             </script>
+       </body>
+</html>

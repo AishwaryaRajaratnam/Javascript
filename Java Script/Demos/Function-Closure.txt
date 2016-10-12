@@ -1,0 +1,31 @@
+<html>
+      <head>
+               <title> Function Closure -  Demo </title>
+      </head>
+      <body>
+              <script>
+                      function fnCount(){
+                            var iCnt=0;
+                            /* We can have Nested Functions in JavaScript */
+                            function fnInner(){
+                                 iCnt = iCnt + 1;
+                            }
+                            fnInner();
+                            fnInner();
+                            fnInner();
+                            return iCnt;
+                      } 
+                      document.write(" iCnt              = " + fnCount()  + "<br>");
+
+                      /* Same can be Replaced as SelfInvoking  Function */
+                     var iCounter = (function () {
+	       var iCnt = 0;
+	      return function () {return iCnt += 1;}
+	  })();
+
+	  document.write("First Time  = " + iCounter() + "<br>");
+	  document.write("Second Time  = " + iCounter() + "<br>");
+	  document.write("Third Time  = " + iCounter() + "<br>");
+              </script>
+      </body>
+</html>

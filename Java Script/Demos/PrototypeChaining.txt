@@ -1,0 +1,39 @@
+<html>
+        <head>
+                <title> Prototype Chaining Demo </title>
+         </head> 
+         <body>
+                <script>
+                         function Department(iDno,sDname,sLoc){
+                                this.iDno = iDno;
+                                this.sDname = sDname;
+                                this.sLoc = sLoc;
+                                this.fnDisp = function(){
+                                       document.write(" iDno   =  " + this.iDno + " sDname =  " + this.sDname + " sLoc =  " + this.sLoc + "<br>");
+                                 }
+                         }
+                         function Employee(iEno,sName){
+                                 this.iEno = iEno;
+                                 this.sName = sName;
+                         }
+                         Employee.prototype = new Department(21,'TT','EC4');
+                         var objEmployee = new Employee(12,'Magesh');
+                         objEmployee.fnDisp();
+                         document.write("Value  = " + objEmployee.iDno);
+                          var objEmp = new Employee(13,'Vijayendra');
+                          objEmp.fnDisplay = function(){
+                                  document.write(" iEno    = " + this.iEno  + " sName  = " + this.sName + "<br>");
+                                   this.fnDisp();
+                           } 
+                           objEmp.fnDisplay();
+                           /* Code For overriding */
+                          var objEmpl = new Employee(14,'Williams');
+                          objEmpl.fnDisp = function(){
+                                  document.write(" iEno    = " + this.iEno  + " sName  = " + this.sName + "<br>");
+	               (new Department(13,'CBE','CDC')).fnDisp();                                  
+                           } 
+                           objEmpl.fnDisp();
+                         
+                </script>
+          </body>
+</html>

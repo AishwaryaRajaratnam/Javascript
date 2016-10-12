@@ -1,0 +1,46 @@
+<html>
+        <head>
+                <title> Object  - Properties and Methods </title>
+        </head>
+        <body>
+                <script>
+                        /* Object with Properties and Methods  */
+                        var myObj = {
+		iNo:12,
+		sName:'Magesh',
+		fnDisplay:function(){
+                                            document.write(" iNo     = " + this.iNo  + " sName = " + this.sName + "<br>");
+		}
+	       };
+                          myObj.fnPrint = function(){
+                                document.write(" Creating Function After Object Creation <br> ");
+                          }
+                          myObj.fnDisplay();
+                          myObj.fnPrint();
+                          function Employee(iEno,sName){
+                                  this.iEno = iEno;
+                                  this.sName = sName;
+                          }
+                          Employee.prototype.fnDisplay = function(){
+                                    document.write(" iEno    =  "  + this.iEno  + " sName  = " + this.sName + "<br>");
+                          }
+                          var objEmployee = new Employee(13,'Konrad'); 
+                          objEmployee.fnDisplay();
+
+                           var objEmp = new Employee(14,'Vijayendra');
+                           objEmp.fnDisplay();
+
+                            var objEmpl = Employee.call(objEmpl,'Mallika');
+                            //objEmpl.fnDisplay();
+
+                          var objCreate = Object.create(Object.prototype, {
+                               iFirst: { writable:true, enumerable:true, value: 1 },
+                               iSecond: { enumerable: true, value: 2 }
+                          });
+                          objCreate.fnCheck = function(){
+                                 document.write(" Outside Object Creation  <br> ");
+                          }
+                          objCreate.fnCheck();
+                </script>
+        </body>
+</html>

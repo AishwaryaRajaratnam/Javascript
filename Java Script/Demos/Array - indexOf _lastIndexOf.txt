@@ -1,0 +1,14 @@
+<html>
+      <head>
+               <title> Arrays Sort Demo </title>
+      </head>
+      <body>
+              <script>
+                      var asStr = ["Magesh","Bhoj","Vijayendra","Savitha","Gayathri","Mallika","Vijayendra"];
+ 
+	   /* Used to search an element in the array and return the index position */
+                      document.write( " indexOf         = " + asStr.indexOf("Vijayendra") + "<br>");
+                      document.write(" lastIndexOf   = " + asStr.lastIndexOf("Vijayendra") + "<br>");                      
+              </script>
+      </body>
+</html>

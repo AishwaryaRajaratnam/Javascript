@@ -1,0 +1,23 @@
+<html>
+       <head>
+                <title>  Variable  --- Demo </title>
+       </head>
+       <body>
+               <script>
+                        aiNumber = new Array(3);
+                        for(iIndex=0;iIndex<3;iIndex++){
+                            aiNumber[iIndex] = new Array(4);
+                         }
+                         document.write(" Length of aiNumber = " + aiNumber.length);
+                         document.write(" Number of Columns = " + aiNumber[0].length + "<br>");
+
+	      for(iRow=0;iRow<aiNumber.length;iRow++){
+                                for(iCol=0;iCol<aiNumber[iRow].length;iCol++){
+                                     aiNumber[iRow][iCol] = iRow * iCol + iCol;
+                                     document.write(aiNumber[iRow][iCol] + " <br>");
+                                }
+                         }
+
+              </script> 
+       </body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+      <head>
+             <title> Browser Information </title>
+       </head>
+       <body>
+              <script>
+                    document.write("<li><b>Code Name: </b> " +navigator.appCodeName);
+                    document.write("<li><b>App Name: </b> " +navigator.appName);
+                    document.write("<li><b>App Version: </b> " +navigator.appVersion);
+                    document.write("<li><b>User Agent: </b> " +navigator.userAgent);
+                    document.write ("<li><b>Platform: </b> " +navigator.platform);
+              </script>
+       </body>
+</html>
